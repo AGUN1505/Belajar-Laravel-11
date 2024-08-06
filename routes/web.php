@@ -14,6 +14,19 @@ Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact']);
 });
 
-Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog']);
+Route::get('/posts', function () {
+    return view('posts', ['title' => 'Blog', 'posts' => [
+        [
+            'id' => 1,
+            'title' => 'Judul Artikel',
+            'author' => 'John Doe',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+        ],
+        [
+            'id' => 2,
+            'title' => 'Judul Artikel2',
+            'author' => 'John Doe',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.'
+        ]
+    ]]);
 });
